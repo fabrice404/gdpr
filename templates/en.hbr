@@ -1,0 +1,58 @@
+{{#if errors}}
+<div class="alert alert-danger" role="alert">
+  <ul>
+    {{#each errors}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</div>
+{{else}}
+<p>Dear Sir or Madam</p>
+
+<p>I am writing to obtain the following information that I am entitled to receive pursuant to Article 15 of the General Data
+  Protection Regulation (GDPR):</p>
+
+<p>
+  Please confirm as to whether or not my personal data is being processed, and, where that is the case, please provide access
+  to the personal data, and the following information:
+  <ul>
+    <li>the purposes of the processing;</li>
+    <li>the categories of personal data concerned;</li>
+    <li>the recipients or categories of recipient to whom the personal data have been or will be disclosed;</li>
+    <li>where possible, the envisaged period for which the personal data will be stored, or, if not possible, the criteria used
+      to determine that period;</li>
+    <li>where the personal data are not collected from me, any available information as to their source;</li>
+    <li>the existence of automated decision-making, including profiling, and at least in those cases, meaningful information
+      about the logic involved, as well as the significance and the envisaged consequences of such processing for me.</li>
+  </ul>
+</p>
+
+<p>If you need any more information from me, please let me know as soon as possible. Please note that I have the right to receive
+  this information in a standardized format within 30 days of your receipt of this request.</p>
+
+<p>If you do not normally deal with these requests, please pass along this letter to your Data Protection Officer. My preferred
+  method of contact is {{contact}}.</p>
+
+<p>Regards,</p>
+
+<p>{{name}}</p>
+{{#if email}}
+<address>
+  <strong>Email</strong>
+  <br> {{email}}
+</address>
+{{/if}} {{#if phone}}
+<address>
+  <strong>Phone</strong>
+  <br> {{phone}}
+</address>
+{{/if}} {{#if address}}
+<address>
+  <strong>Address</strong>
+  {{#if address1}}
+  <br> {{address1}}{{/if}} {{#if address2}}
+  <br> {{address2}}{{/if}} {{#if address3}}
+  <br> {{address3}}{{/if}} {{#if address4}}
+  <br> {{address4}}{{/if}}
+</address>
+{{/if}} {{/if}}
