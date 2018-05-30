@@ -66,7 +66,7 @@ const generate = (event) => {
       document.getElementById('content').innerHTML = template(context);
     }
   };
-  xhr.open('GET', `/templates/${language}.hbr`, true);
+  xhr.open('GET', `./templates/${language}.hbr`, true);
   xhr.send();
 };
 
